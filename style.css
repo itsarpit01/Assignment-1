@@ -8,8 +8,6 @@
   --gap: 16px;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +20,6 @@ body {
   font-family: Arial, sans-serif;
  
 }
-
-
-
 header {
 
   position: sticky; 
@@ -64,8 +59,6 @@ nav a:hover {
   color: var(--main-color);
 }
 
-
-
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -85,8 +78,6 @@ h3 {
 section p {
   margin-bottom: 0.6em; 
 }
-
-
 
 main img[alt="Profile photo"] {
   border-radius: 50%;
@@ -237,5 +228,4 @@ footer {
 
   main {
     padding: 10px;
-  }
-}
+  }}
