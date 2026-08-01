@@ -1,11 +1,13 @@
-
-
 :root {
-  --main-color: #00b8c4;     
-  --bg-color: #f7f9fa;
-  --text-color: #1a1a1a;
-  --border-color: #ddd;
+  --main-color: #4A47A3;
+  --accent-color: #F2A541;
+  --bg-color: #eef0fb;
+  --surface-color: #ffffff;
+  --text-color: #1c1c26;
+  --muted-text: #5a5a68;
+  --border-color: #dcdce8;
   --gap: 16px;
+  --radius: 10px;
 }
 
 * {
@@ -18,105 +20,132 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
- 
+  line-height: 1.5;
 }
 header {
-
-  position: sticky; 
+  position: sticky;
   top: 0;
-  z-index: 10;
-  background-color: white;
+  z-index: 100;
+  background: linear-gradient(90deg, var(--main-color), #6a67c9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-header table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-header td {
-  padding: 10px var(--gap);
-  vertical-align: middle;
-}
-
-
-
-nav {
-  display: inline-flex;  
-  gap: var(--gap);
+.header-bar {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 14px var(--gap);
+  gap: var(--gap);
+  flex-wrap: wrap;
 }
 
-nav a {
-  color: #005f66;
+.site-title {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.main-nav {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #e8e7fb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
-
-nav a:hover {
-  text-decoration: none;
-  
-  color: var(--main-color);
+.main-nav a:hover {
+  color: var(--accent-color);
 }
-
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--gap);
 }
 
-h2 {
+.hero {
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  padding: 24px;
   margin-top: var(--gap);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  font-size: 1.8rem;
 }
 
 h3 {
-  margin-top: 1.5rem;   
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--main-color);
+  font-size: 1.25rem;
 }
 
-section p {
-  margin-bottom: 0.6em; 
+section {
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-top: var(--gap);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-main img[alt="Profile photo"] {
+main img {
   border-radius: 50%;
   border: 3px solid var(--main-color);
   transition: transform 0.3s ease;
 }
 
-main img[alt="Profile photo"]:hover {
-  transform: scale(1.05); 
+main img:hover {
+  transform: scale(1.05);
 }
 
+main a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main a:hover {
+  color: var(--accent-color);
+}
 #skills ul {
   list-style: none;
-  display: flex;          
+  display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px 0 16px;
+  margin-top: 8px;
 }
 
 #skills ul li {
-  background-color: #e6fbfc;
-  border: 1px solid var(--border-color);
-  padding: 4px 10px;
+  background-color: #ecebfb;
+  color: var(--main-color);
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
+#skills ul li:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
 #experience table {
   width: 100%;
   border-collapse: collapse;
-  margin: var(--gap) 0;
+  margin-top: var(--gap);
 }
 
 #experience th,
 #experience td {
   border: 1px solid var(--border-color);
-  padding: 8px 12px;
+  padding: 10px 14px;
   text-align: left;
-  white-space: nowrap; 
 }
 
 #experience th {
@@ -125,107 +154,119 @@ main img[alt="Profile photo"]:hover {
 }
 
 #experience tbody tr:hover {
-  color: red;
-  cursor: pointer;
+  background-color: #fdf1de;
 }
-
-#projects {
-  margin-top: var(--gap);
-}
-
 #projects li {
   list-style: none;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
+  padding: 14px 16px;
+  background-color: #f7f7fd;
+  border-radius: var(--radius);
 }
-#projects a {
-  color: var(--main-color);
-}
-#projects a:hover {
-  color: red; 
-}
-
-#Achievements ul {
-  list-style: none;
-  display: grid;                                       
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 8px;
-  margin: 8px 0 16px;
+#achievements ul {
+  margin-top: 8px;
+  margin-left: 20px;
 }
 
-#Achievements li {
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 0.9rem;
+#achievements li {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
 }
 
-#Contact form {
+#contact form {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  max-width: calc(100% - 20px); 
+  gap: 10px;
+  max-width: 480px;
   margin-top: var(--gap);
 }
 
-#Contact input,
-#Contact select {
+#contact .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#contact label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+#contact input,
+#contact select {
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 8px 10px;
+  padding: 8px 12px;
   font-family: inherit;
 }
 
-#Contact button {
+#contact input:focus,
+#contact select:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+#contact .form-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+#contact button {
   width: fit-content;
-  padding: 8px 20px;
-  border: none;
+  padding: 10px 24px;
   border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+}
+
+#contact button[type="submit"] {
   background-color: var(--main-color);
   color: white;
-  cursor: pointer;
 }
 
-#Contact button:hover {
-  background-color: #008a93;
+#contact button[type="submit"]:hover {
+  background-color: #37337d;
 }
 
-a {
-  color: #0077b5; 
-}
-
-#Social-Links li a {
-  color: #1a1a1a; 
-}
-
-#Social-Links li a:hover {
+#contact button[type="reset"] {
+  background-color: transparent;
   color: var(--main-color);
 }
 
+#contact button[type="reset"]:hover {
+  background-color: #ecebfb;
+}
+
+#social-links li {
+  list-style: none;
+  margin-top: 6px;
+}
+
+#social-links li a {
+  color: var(--text-color);
+}
+
+#social-links li a:hover {
+  color: var(--accent-color);
+}
 footer {
   text-align: center;
   margin-top: 2rem;
   padding: var(--gap);
-  color: #666;
+  color: var(--muted-text);
   font-size: 0.85rem;
 }
 @media (max-width: 600px) {
-  header table,
-  header tr,
-  header td {
-    display: block;  
-    width: 100%;
-  }
-
-  header td[align="right"] {
-    text-align: left;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 8px;
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   main {
     padding: 10px;
-  }}
+  }
+}
