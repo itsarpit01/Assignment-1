@@ -1,13 +1,10 @@
 :root {
-  --main-color: #4A47A3;
-  --accent-color: #F2A541;
-  --bg-color: #eef0fb;
-  --surface-color: #ffffff;
-  --text-color: #1c1c26;
-  --muted-text: #5a5a68;
-  --border-color: #dcdce8;
+  --text-color: #111111;
+  --muted-text: #6b7280;
+  --bg-color: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #2563eb;
   --gap: 16px;
-  --radius: 10px;
 }
 
 * {
@@ -19,196 +16,227 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* ---------- Header & Nav ---------- */
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(90deg, var(--main-color), #6a67c9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header-bar {
-  max-width: 900px;
+  max-width: 640px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px var(--gap);
+  padding: 16px var(--gap);
   gap: var(--gap);
   flex-wrap: wrap;
 }
 
 .site-title {
-  font-size: 22px;
-  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 .main-nav {
   display: inline-flex;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .main-nav a {
-  color: #e8e7fb;
+  color: var(--muted-text);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .main-nav a:hover {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
-/* ---------- Main / Hero ---------- */
 main {
-  max-width: 800px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: var(--gap);
+  padding: 0 var(--gap);
 }
 
 .hero {
-  background-color: var(--surface-color);
-  border-radius: var(--radius);
-  padding: 24px;
-  margin-top: var(--gap);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 56px 0 32px;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--main-color);
-  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-text);
 }
 
 section {
-  background-color: var(--surface-color);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin-top: var(--gap);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 32px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+section p {
+  color: var(--text-color);
+  margin-bottom: 0.8em;
 }
 
 main img {
   border-radius: 50%;
-  border: 3px solid var(--main-color);
-  transition: transform 0.3s ease;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 main img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 main a {
-  color: var(--main-color);
+  color: var(--accent-color);
   text-decoration: none;
-  font-weight: 600;
 }
 
 main a:hover {
-  color: var(--accent-color);
+  text-decoration: underline;
 }
 
-/* ---------- Skills ---------- */
 #skills > ol {
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#skills > ol > li {
+  margin-bottom: 24px;
+}
+
+#skills > ol > li:last-child {
+  margin-bottom: 0;
+}
+
+#skills > ol > li > b {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
 }
 
 #skills ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-  margin-bottom: 16px;
+  gap: 10px;
 }
 
 #skills ul li {
-  background-color: #ecebfb;
-  color: var(--main-color);
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+#skills ul li img {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  margin: 0;
 }
 
 #skills ul li:hover {
-  background-color: var(--main-color);
-  color: #fff;
+  border-color: var(--accent-color);
 }
 
-/* ---------- Experience Table ---------- */
 #experience table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: var(--gap);
+  margin-top: 12px;
 }
 
 #experience th,
 #experience td {
-  border: 1px solid var(--border-color);
-  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 8px;
   text-align: left;
+  font-size: 0.9rem;
 }
 
 #experience th {
-  background-color: var(--main-color);
-  color: white;
+  color: var(--muted-text);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-#experience tbody tr:hover {
-  background-color: #fdf1de;
-}
-
-/* ---------- Projects ---------- */
 #projects li {
   list-style: none;
-  margin-top: 1.2rem;
-  padding: 14px 16px;
-  background-color: #f7f7fd;
-  border-radius: var(--radius);
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* ---------- Achievements ---------- */
+#projects li:last-child {
+  border-bottom: none;
+}
+
 #achievements ul {
   margin-top: 8px;
   margin-left: 20px;
 }
 
 #achievements li {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 4px;
+  color: var(--text-color);
 }
 
-/* ---------- Contact Form ---------- */
 #contact form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
   max-width: 480px;
-  margin-top: var(--gap);
+  margin-top: 12px;
 }
 
 #contact .form-field {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 #contact label {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--muted-text);
 }
 
@@ -217,8 +245,9 @@ main a:hover {
 #contact textarea {
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 8px 10px;
   font-family: inherit;
+  font-size: 0.9rem;
 }
 
 #contact textarea {
@@ -229,51 +258,55 @@ main a:hover {
 #contact select:focus,
 #contact textarea:focus {
   outline: none;
-  border-color: var(--main-color);
+  border-color: var(--accent-color);
 }
 
 #contact .form-actions {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-top: 4px;
-  width: 100%;
 }
 
 #contact button {
   width: fit-content;
   flex: 0 0 auto;
-  padding: 10px 24px;
+  padding: 8px 18px;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--text-color);
 }
 
 #contact button[type="submit"] {
-  background-color: var(--main-color);
+  background-color: var(--text-color);
   color: white;
 }
 
 #contact button[type="submit"]:hover {
-  background-color: #37337d;
+  background-color: #333;
 }
 
 #contact button[type="reset"] {
   background-color: transparent;
-  color: var(--main-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 #contact button[type="reset"]:hover {
-  background-color: #ecebfb;
+  border-color: var(--text-color);
 }
 
-/* ---------- Social Links ---------- */
 #social-links b {
   display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-bottom: 8px;
-  color: var(--text-color);
 }
 
 #social-links li {
@@ -282,22 +315,16 @@ main a:hover {
 }
 
 #social-links li a {
-  color: var(--main-color);
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-#social-links li a:hover {
   color: var(--accent-color);
 }
 
-/* ---------- Footer ---------- */
 footer {
   text-align: center;
-  margin-top: 2rem;
-  padding: var(--gap);
+  margin-top: 40px;
+  padding: 24px var(--gap);
   color: var(--muted-text);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .table-scroll {
@@ -306,116 +333,68 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Menu Toggle (CSS-only, full-screen overlay) ---------- */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 4px 8px;
+}
+
+.menu-icon .icon-close {
+  display: none;
+}
+
+.menu-checkbox:checked ~ .menu-icon .icon-open {
+  display: none;
+}
+
+.menu-checkbox:checked ~ .menu-icon .icon-close {
+  display: inline-block;
+}
+
 @media (max-width: 768px) {
-  main {
-    padding: 12px;
+  .menu-icon {
+    display: inline-block;
+    position: relative;
+    z-index: 201;
   }
 
   .header-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px var(--gap);
-  }
-
-  .site-title {
-    font-size: 18px;
+    position: relative;
   }
 
   .main-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 15px;
-    gap: 4px;
-  }
-
-  .main-nav a {
-    display: block;
-    width: 100%;
-    margin: 4px 0;
-  }
-
-  .hero,
-  section {
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  main img {
-    width: 150px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  section {
-    width: 100%;
-  }
-
-  #skills ul li,
-  #achievements li {
-    font-size: 0.85rem;
-  }
-
-  #experience thead {
     display: none;
-  }
-
-  #experience table,
-  #experience tbody,
-  #experience tr,
-  #experience td {
-    display: block;
-    width: 100%;
-  }
-
-  #experience tr {
-    margin-bottom: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  #experience td {
-    border: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-
-  #experience td:last-child {
-    border-bottom: none;
-  }
-
-  #experience td::before {
-    content: attr(data-label);
-    display: block;
-    font-weight: 600;
-    font-size: 0.75rem;
-    color: var(--main-color);
-    margin-bottom: 2px;
-  }
-
-  #contact form {
-    max-width: 100%;
-  }
-
-  #contact .form-actions {
     flex-direction: column;
-    align-items: stretch;
+    gap: 0;
   }
 
-  #contact button {
-    width: 100%;
+  .menu-checkbox:checked ~ .main-nav {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    top: 60px;
+    background-color: var(--bg-color);
+    padding: 8px 24px;
+    z-index: 200;
+    overflow-y: auto;
+  }
+
+  .menu-checkbox:checked ~ .main-nav a {
+    padding: 18px 4px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--muted-text);
+  }
+
+  .menu-checkbox:checked ~ .main-nav a.active {
+    color: var(--text-color);
+    font-weight: 700;
   }
 }
