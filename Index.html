@@ -7,6 +7,10 @@
     <meta name="description" content="Portfolio of Arpit Thakur, a Computer Science graduate and Software Engineer specializing in MERN stack development, React.js, Node.js, and full-stack web applications.">
     <meta name="keywords" content="Arpit Thakur, Software Engineer, MERN Stack Developer, React Developer, Web Developer Portfolio, Full Stack Developer">
     <meta name="author" content="Arpit Thakur">
+     <meta property="og:type" content="website">
+         <meta property="og:title" content="Arpit Thakur | Software Engineer & MERN Stack Developer">
+<meta property="og:description" content="Computer Science graduate passionate about web development, software engineering, and problem solving. Explore my projects, skills, and experience.">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -147,8 +151,8 @@
                     </p>
                     <b>Technologies Used</b>
                     <p>MongoDB, Express.js, React.js, Node.js</p>
-                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer">GitHub Repository</a></p>
-                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer">Live Demo</a></p>
+                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer"target="_blank" >GitHub Repository</a></p>
+                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer" target="_blank">Live Demo</a></p>
                 </li>
 
                 <li>
@@ -161,8 +165,8 @@
                     </p>
                     <b>Technologies Used</b>
                     <p>Node.js, Express.js, React, SQLite, JWT</p>
-                    <p><a href="https://github.com/itsarpit01/taskflow">GitHub Repository</a></p>
-                    <p><a href="https://taskflow-production-3758.up.railway.app/">Live Demo</a></p>
+                    <p><a href="https://github.com/itsarpit01/taskflow" target="_blank">GitHub Repository</a></p>
+                    <p><a href="https://taskflow-production-3758.up.railway.app/" target="_blank">Live Demo</a></p>
                 </li>
 
                 <li>
@@ -174,8 +178,8 @@
                     </p>
                     <b>Technologies Used</b>
                     <p>C#, .NET Framework, Windows Forms</p>
-                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer">GitHub Repository</a></p>
-                    <p><a href="#">Live Demo</a></p>
+                    <p><a href="https://github.com/itsarpit01/Event-Countdown-Timer" target="_blank">GitHub Repository</a></p>
+                    <p><a href="#" target="_blank">Live Demo</a></p>
                 </li>
             </ol>
         </section>
@@ -215,14 +219,29 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="phonenumber">Phone Number</label>
-                    <input type="tel" id="phonenumber" name="phonenumber" required>
+                 <label for="phonenumber">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phonenumber" 
+                    name="phonenumber" 
+                pattern="[0-9]{10}" 
+                   inputmode="numeric"
+                  maxlength="10"
+                   title="Enter a 10-digit phone number"
+                 placeholder="9876543210"
+                  required>
 
                     <label for="subject">Subject</label>
                     <input type="text" id="subject" name="subject" required>
 
                     <label for="message">Message</label>
-                    <input type="text" id="message" name="message" required>
+                    <textarea 
+                    id="message" 
+                   name="message" 
+                     rows="5" 
+                       placeholder="Write your message here..."
+                        required></textarea>
+             
       
                     <label for="contactmethod">Preferred Contact Method:</label>
                     <select id="contactmethod" name="contactmethod">
@@ -232,8 +251,10 @@
           <option>LinkedIn</option>
                     </select>
                 
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
+                   <div class="form-actions">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</div>
             </form>
         </section>
 
@@ -241,13 +262,13 @@
             <b>Social Links</b>
             <ul>
                 <li><a href="https://www.linkedin.com/in/arpit-thakur-189988249/" target="_blank" 
-                    rel="noopener noreferrer">LinkedIn</a></li>
+                  >LinkedIn</a></li>
                 <li><a href="https://github.com/itsarpit01" target="_blank" 
-                rel="noopener noreferrer">GitHub</a></li>
+               >GitHub</a></li>
                 <li><a href="https://arpitportfolio-site.vercel.app/" target="_blank" 
-                    rel="noopener noreferrer">Portfolio</a></li>
+                   >Portfolio</a></li>
                 <li><a href="mailto:arpithakur988@gmail.com" target="_blank" 
-                    rel="noopener noreferrer">Email</a></li>
+                    >Email</a></li>
             </ul>
         </section>
     </main>
