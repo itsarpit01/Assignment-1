@@ -278,13 +278,18 @@ footer {
     padding: 20px var(--gap);
   }
 
-  .main-nav {
+.main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     margin-top: 15px;
   }
 
   .main-nav a {
     display: block;
+    width: 100%;
     margin: 8px 0;
+    padding: 6px 0;
   }
 
   .hero {
@@ -304,9 +309,89 @@ footer {
   }
 
   section {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 25px;
+   width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .hero,
+  section {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  main img {
+    width: 150px;
+  }
+
+  #skills ul li,
+  #achievements li {
+    font-size: 0.85rem;
+  }
+
+  #experience thead {
+    display: none;
+  }
+
+  #experience table,
+  #experience tbody,
+  #experience tr,
+  #experience td {
+    display: block;
+    width: 100%;
+  }
+
+  #experience tr {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #experience td {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  #experience td:last-child {
+    border-bottom: none;
+  }
+
+  #experience td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--main-color);
+    margin-bottom: 2px;
+  }
+
+  #contact form {
+    max-width: 100%;
+  }
+
+  #contact .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #contact button {
+    width: 100%;
   }
 }
